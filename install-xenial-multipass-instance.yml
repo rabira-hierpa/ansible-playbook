@@ -1,0 +1,11 @@
+###########################################################################
+# AAU CNCS CS-Lab 3 Playbooks: Install multipass instances on Ubuntu 16.04
+###########################################################################
+---
+- hosts: cslab3
+  become: true
+  become_method: sudo
+
+  tasks:
+    -  name: Install Xenial Multipass Instance
+       shell: "multipass launch xenial"
