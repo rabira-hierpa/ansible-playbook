@@ -1,0 +1,11 @@
+############################################################
+# AAU CNCS CS-Lab 3 Playbooks: Install Java JDK on Ubuntu 16.04
+############################################################
+---
+- hosts: cslab3
+  become: true
+  become_method: sudo
+
+  tasks:
+    -  name: Install Default JDK
+       shell: "apt-get install default-jdk -y"
